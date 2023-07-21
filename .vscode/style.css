@@ -1,0 +1,188 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+
+/*config de cor do modo escuro, com img de fundo, cor de pseudos e config de texto*/
+:root {
+  --text-color: white;
+  --bg-mobile: url(./assets/bg-mobile.jpg);
+  --stroke-color:  rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.05);
+  --surface-color-hover: rgba(0,0,0,0.2);
+  --highlight-color: rgba(55, 54, 54, 0.4);
+  --switch-bg-url: url(./assets/moonstars.svg);
+  --switch-hover: rgb(156, 153, 153);
+}
+/*config de cor do modo claro, com img de fundo, cor de pseudos e config de texto*/
+.light{
+  --text-color: black;
+  --bg-mobile: url(./assets/bg-mobile-light.jpg);
+  --stroke-color:  rgba(0, 0, 0, 0.5);
+  --surface-color: rgba(0,0,0,0.05);
+  --surface-color-hover: rgba(0,0,0,0.2);
+  --highlight-color: rgba(27, 26, 26, 0.1);
+  --switch-bg-url: url(./assets/sun.svg);
+  --switch-hover: rgb(157, 153, 153);
+  --span-color: rgb(93, 203, 106);
+}
+
+
+/*config do plano de fundo*/
+body {
+  background: var(--bg-mobile);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+/*config geral de texto*/
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+
+/*config das bordas e posicionmento da div "Container"*/
+#container{
+  width: 380px;
+  margin: auto;
+  padding: 0 24px;
+  margin-top: 56px;
+  /*border: 1px solid white;*/
+  margin: 30px auto 0px auto; /*logica do relogio*/
+}
+
+
+/*profile*/
+/*config da div "perfil"*/
+#profile{
+  text-align: center;
+  padding: 24px; 
+}
+/*config da img*/
+#profile img{
+  width: 112px;
+}
+
+#profie p{
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 8px;
+} 
+
+
+/*switch*/
+/*config geral do switch (para haver separacao e organizacao em relacao a outros elementos como img e lis) tambem relativisando o "position" se atribuindo os parametros como pai*/
+#switch{
+  position: relative;
+  width: 64px;
+
+  margin: 10px auto;
+  bottom: 0px;
+}
+/*16\07------config de caixa e borda do botao, alem de configs de camada e posicionamento de "position"*/
+#switch button{
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 1px solid grey;
+  border-radius: 50%;
+
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  z-index: 1;
+  left: 0;
+
+  transition: background 0.2s;
+}
+/*pseudoseletor do botao para fazer as alteracoes do modo claro*/
+.light #switch button{
+  left: initial;
+  right: 0;
+}
+/*config da span dentro do button dentro da div switch, cor, dimensoes e estilos*/
+#switch span{
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+
+}
+
+.light #switch span{
+  background-color: var(--span-color);
+}
+
+#switch button:hover {
+  background-color: var(--switch-hover);
+} 
+
+/*links*/ 
+/*config da lista, alinhamentro de caixa e texto*/
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+/*config dos links dentro da lista*/
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 24px;
+  background: var(--surface-color);
+  border-radius: 20px;
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: bold;
+
+  transition: background 0.2s;
+}
+/*pseudoselector*/
+ul li a:hover {
+  display: flex;
+  background: var(--surface-color-hover);
+  border: 1.5px solid --text-color;
+}
+
+
+/*confg dos icones e dos links dentro destes*/
+#social-link{
+  display: flex;
+  gap: 16px;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-link a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 50%;
+
+  transition: background 0.2s;
+}
+
+#social-link a:hover{
+  background:var(--highlight-color);
+  padding: 16px;
+}
+
+
+/*config do texto de baixo*/
+footer{
+  padding: 24px;
+  text-align: center;
+} 
