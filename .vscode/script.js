@@ -19,13 +19,13 @@ function toggleMode() {
 
 
 function senha1() {
-  const senha = prompt("Você é gay?");
-  if (senha === 'Sim') {
+  const senha = prompt("Você é dev");
+  if (senha === 'N') {
     window.close();
-  } else if (senha === 'Nao') {
+  } else if (senha === 'Y') {
     location.reload();
   } else {
-    alert('Escreve direito');
+    alert('Y/N');
     senha1();
   }
 }
