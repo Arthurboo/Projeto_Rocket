@@ -1,4 +1,4 @@
-<h1 align="center"> DevLink </h1>
+<h1 <h1 align="center"> DevLink </h1>
 
 <p align="center">
 Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnologias WEB.
@@ -18,7 +18,7 @@ Programa exclusivo e gratuito, promovido pela Rocketseat para ensino de tecnolog
 <br>
 
 <p align="center">
-  <img alt="projeto DevLinks" src=".//preview.jpg" width="100%">
+  <img alt="Meu projeto DevLinks" src="./assets/finalresult.jpg" width="100%">
 </p>
 
 ## 🚀 Tecnologias
